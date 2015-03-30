@@ -4,15 +4,15 @@ require 'pry'
 require 'fitgem'
 require 'chronic'
 # require 'HTTParty'
-
+require 'dotenv'
+Dotenv.load
 
 # Fitgem client docs: http://www.rubydoc.info/gems/fitbit/0.2.0/Fitbit/Client#activities_on_date-instance_method
 
-
-
+consumer_key = ENV['FITBIT_CONSUMER_KEY']
+consumer_secret = ENV['FIBIT_CONSUMER_SECRET']
 
 # Gets access to client
-
 
 client = Fitgem::Client.new({:consumer_key => consumer_key, :consumer_secret => consumer_secret})
 
